@@ -23,7 +23,8 @@
                 "name": {
                   "type": "string",
                   "examples": ["ni","n2"],
-                  "description":"aaaaaa"
+                  "description":"aaaaaa",
+                  "title":"aaaaaa"
             
                 },
                 "value": {
