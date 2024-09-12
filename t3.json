@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "JsonOriginBean",
+  "properties": {
+    "M1": {
+      "type": "string"
+    },
+    "jsonList": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "JsonOriginListItem",
+        "properties": {
+          "A1": {
+            "type": "string"
+          },
+          "opdata": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "enum": ["n1", "n2", "n3", "n4"]
+                },
+                "value": {
+                  "type": "string"
+                }
+              },
+              "required": ["name", "value"]
+            }
+          }
+        },
+        "required": ["A1"]
+      }
+    },
+    "opdatalist": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "enum": ["n1", "n2", "n3", "n4"]
+          },
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": ["name", "value"]
+      }
+    }
+  },
+  "required": ["M1", "jsonList"]
+}
