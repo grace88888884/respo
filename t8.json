@@ -24,6 +24,7 @@
                   "type": "string",
                   "examples": ["ni","n2"],
                   "description":"aaaaaa"
+                  "contains":"aaaaaa"
                 },
                 "value": {
                   "type": "string"
