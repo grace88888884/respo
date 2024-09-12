@@ -22,7 +22,7 @@
               "properties": {
                 "name": {
                   "type": "string",
-                  "enum": ["n1", "n2", "n3", "n4"]
+                  "$comment": "n1,n2,n3"
                 },
                 "value": {
                   "type": "string"
@@ -42,7 +42,7 @@
         "properties": {
           "name": {
             "type": "string",
-            "enum": ["n1", "n2", "n3", "n4"]
+            "$comment": "n1,n4"
           },
           "value": {
             "type": "string"
