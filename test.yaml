@@ -1,0 +1,38 @@
+asyncapi: 3.0.0
+info:
+  title: User Signup API
+  version: 1.0.0
+  description: The API notifies you whenever a new user signs up in the application.
+servers:
+  kafkaServer:
+    host: test.mykafkacluster.org:8092
+    description: Kafka Server
+    protocol: kafka
+
+channels:
+  userSignedUp:
+    description: This channel contains a message per each user who signs up in our application.
+    address: user_signedup
+    messages:
+      userSignedUp:
+        $ref: '#/components/messages/responseMsg'
+components:
+  messages:
+    responseMsg:
+      name: responseMsg
+      title: responseMsg
+      contentType: application/json
+      payload:
+        oneOf:
+          - $ref: '#/components/schemas/CN'
+          - $ref: '#/components/schemas/AU'
+  schemas:
+    CN:
+      discriminator: CN schema
+      schema: 
+          $ref: https://raw.githubusercontent.com/grace88888884/respo/master/t1.json
+    AU:
+      discriminator: AU schema
+      schema: 
+          $ref:  https://raw.githubusercontent.com/grace88888884/respo/master/t2.json
+           
