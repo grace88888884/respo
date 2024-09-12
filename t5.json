@@ -22,7 +22,8 @@
               "properties": {
                 "name": {
                   "type": "string",
-                  "examples": ["ni","n2"]
+                  "examples": ["ni","n2"],
+                  "description":"aaaaaa"
                 },
                 "value": {
                   "type": "string"
