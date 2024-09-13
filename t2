@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "AU",
+  "properties": {
+    "M1": {
+      "type": "string"
+    },
+    "jsonList": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "opdata1": {
+            "type": "object",
+              "properties": {
+                "a1": {
+                  "type": "string",
+                  "examples": ["ni","n2"]
+                },
+                "a2": {
+                  "type": "string"
+                }
+              }
+            }
+        },
+        "required": ["A1"]
+      }
+    }
+  }
+}
