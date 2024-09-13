@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "title": "CN",
+  "title": "AU",
   "properties": {
     "M1": {
       "type": "string"
@@ -10,47 +10,63 @@
       "type": "array",
       "items": {
         "type": "object",
-        "title": "JsonOriginListItem",
         "properties": {
-          "A1": {
-            "type": "string"
+          "opdata1": {
+            "type": "object",
+            "properties": {
+              "a1": {
+                "type": "string",
+                "examples": ["ni","n2"]
+              },
+              "a2": {
+                "type": "string"
+              }
+            }
+
           },
-          "opdata": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "type": "string",
-                  "$comment": "n1,n2,n3,n4"
-                },
-                "value": {
-                  "type": "string"
+          "nonoptdata2": {
+            "type": "object",
+            "properties": {
+              "s1": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "examples": ["ni","n2"]
+                    },
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["name", "value"]
                 }
               },
-              "required": ["name", "value"]
+              "s2": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "examples": ["ni","n2"]
+                    },
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["name", "value"]
+                }
+              }
             }
+
           }
+
+
         },
         "required": ["A1"]
       }
-    },
-    "opdatalist": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "$comment": "n1,n2,n3,n4"
-          },
-          "value": {
-            "type": "string"
-          }
-        },
-        "required": ["name", "value"]
-      }
     }
-  },
-  "required": ["M1", "jsonList"]
+  }
 }
